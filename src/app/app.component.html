@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+  <div class="container"> 
+      <a class="navbar-brand d-flex align-items-center" routerLink="home">
+        <span class="ml-3 font-weight-bold">ALITASKENTAI</span>
+      </a>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar4">
+      <ul class="navbar-nav mr-auto pl-lg-4">
+        <li class="nav-item px-lg-2 active"> 
+          <a class="nav-link" routerLink="home">
+          <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Inicio
+          </a>
+        </li>
+        <li class="nav-item px-lg-2"> 
+          <a class="nav-link" routerLink="producto">
+            <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Productos
+          </a>
+        </li>
+        <li class="nav-item px-lg-2"> 
+          <a class="nav-link" routerLink="local">
+            <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Locales
+          </a>
+        </li>
+        <li class="nav-item px-lg-2"> 
+          <a class="nav-link" routerLink="contacto">
+            <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Contacto
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+        <li class="nav-item px-lg-2"> 
+          <a class="nav-link" routerLink="login">
+            <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section style="min-height: 570px; padding-top: 0px; padding-bottom: 0px; margin-top: 60px;">
+    <router-outlet></router-outlet>
+</section>
