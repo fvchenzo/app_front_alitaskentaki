@@ -1,0 +1,65 @@
+[
+  {
+    "Codigo": 1,
+    "Nombre": "1/4 Pollo + papa + ensalada",
+    "Precio": 20,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 2,
+    "Nombre": "1/2 pollo + papa + ensalada",
+    "Precio": 35,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 3,
+    "Nombre": "1 pollo + papa + ensalada",
+    "Precio": 60,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 4,
+    "Nombre": "1/4 Pollo + papa + ensalada + chaufa",
+    "Precio": 25,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 5,
+    "Nombre": "1/2 pollo + papa + ensalada + chaufa",
+    "Precio": 40,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 6,
+    "Nombre": "1 pollo + papa + ensalada + chaufa",
+    "Precio": 65,
+    "Categoria": "Pollos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 7,
+    "Nombre": "Saltado de Pollo",
+    "Precio": 24,
+    "Categoria": "Platos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 8,
+    "Nombre": "Lomo Saltado",
+    "Precio": 26,
+    "Categoria": "Platos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  },
+  {
+    "Codigo": 9,
+    "Nombre": "Chaufa de Pollo",
+    "Precio": 24,
+    "Categoria": "Platos",
+    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+  }
+]
