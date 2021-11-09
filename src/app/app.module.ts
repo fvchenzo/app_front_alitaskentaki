@@ -8,6 +8,9 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { LocalComponent } from './pages/local/local.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AdminPedidoComponent } from './pages/pedido/admin-pedido/admin-pedido.component';
+import { DetallePedidoComponent } from './pages/pedido/detalle-pedido/detalle-pedido.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { LoginComponent } from './pages/login/login.component';
     ProductoComponent,
     LocalComponent,
     ContactoComponent,
-    LoginComponent
+    LoginComponent,
+    AdminPedidoComponent,
+    DetallePedidoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingngMOdule
+    AppRoutingngMOdule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
