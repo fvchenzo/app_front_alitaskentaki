@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Params } from '@angular/router';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-detalle-producto',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleProductoComponent implements OnInit {
 
-  constructor() { }
+  producto: any = []
+  constructor(
+    private readonly ps: ProductosService,
+    private readonly ar: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  __getProductoCodigo(codigo: number){
+    this.ps.__getProductos().subscribe((rest: any) =>{
+      this.producto = rest.filter((item: { Codigo: Number}) => item.Codigo == codigo);
+    })
   }
 
+  ngOnInit(): void {
+    this.ar.params.subscribe((params: Params) => {
+      if(params.codigo) {
+        this.__getProductoCodigo(params.codigo);
+      }
+    });
+  }
+
+  __onSubmit() {
+    
+  }
 }

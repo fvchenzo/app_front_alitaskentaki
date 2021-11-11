@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DetalleProductoComponent } from './pages/producto/detalle-producto/detalle-producto.component';
 import { ListadoProductoComponent } from './pages/producto/listado-producto/listado-producto.component';
 import { AdminProductoComponent } from './pages/producto/admin-producto/admin-producto.component';
+import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/listado-categoria.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminProductoComponent } from './pages/producto/admin-producto/admin-pr
     DetallePedidoComponent,
     DetalleProductoComponent,
     ListadoProductoComponent,
-    AdminProductoComponent
+    AdminProductoComponent,
+    ListadoCategoriaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,65 +1,83 @@
 [
   {
     "Codigo": 1,
-    "Nombre": "1/4 Pollo + papa + ensalada",
+    "Nombre": "1/4 de Pollo + Ensalada + Papas",
     "Precio": 20,
+    "IdCategoria": "1",
     "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "/assets/img/productos/combopersonal.png",
+    "Descripcion":"1/4 de Pollo + Ensalada + Papas"
   },
   {
     "Codigo": 2,
-    "Nombre": "1/2 pollo + papa + ensalada",
+    "Nombre": "1 Pollo + Ensalada Familiar + Papas",
     "Precio": 35,
+    "IdCategoria": "1",
     "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "assets/img/productos/combofamiliar.png",
+    "Descripcion":"1 Pollo + Ensalada Familiar + Papas"
   },
   {
     "Codigo": 3,
-    "Nombre": "1 pollo + papa + ensalada",
+    "Nombre": "Pollo saltado + Chicha",
     "Precio": 60,
-    "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "IdCategoria": "1",
+    "Categoria": "Platos",
+    "Imagen": "assets/img/productos/pollosaltado.jpg",
+    "Descripcion":"Pollo saltado + Chicha"
   },
   {
     "Codigo": 4,
-    "Nombre": "1/4 Pollo + papa + ensalada + chaufa",
+    "Nombre": "Lomo saltado de cuadril + Chicha",
     "Precio": 25,
-    "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "IdCategoria": "2",
+    "Categoria": "Platos",
+    "Imagen": "assets/img/productos/lomosaltado.jpg",
+    "Descripcion":"Lomo saltado de cuadril + Chicha"
   },
   {
     "Codigo": 5,
     "Nombre": "1/2 pollo + papa + ensalada + chaufa",
     "Precio": 40,
+    "IdCategoria": "1",
     "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "/assets/img/productos/combopersonal.png",
+    "Descripcion":"1/2 pollo + papa + ensalada + chauf"
   },
   {
     "Codigo": 6,
     "Nombre": "1 pollo + papa + ensalada + chaufa",
     "Precio": 65,
+    "IdCategoria": "1",
     "Categoria": "Pollos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "/assets/img/productos/combopersonal.png",
+    "Descripcion":"1 pollo + papa + ensalada + chaufa"
   },
   {
     "Codigo": 7,
     "Nombre": "Saltado de Pollo",
     "Precio": 24,
+    "IdCategoria": "2",
     "Categoria": "Platos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "/assets/img/productos/pollosaltado.jpg",
+    "Descripcion":"Saltado de Pollo"
   },
   {
     "Codigo": 8,
     "Nombre": "Lomo Saltado",
     "Precio": 26,
+    "IdCategoria": "2",
     "Categoria": "Platos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "assets/img/productos/lomosaltado.jpg",
+    "Descripcion":"Lomo Saltado"
   },
   {
     "Codigo": 9,
     "Nombre": "Chaufa de Pollo",
     "Precio": 24,
+    "IdCategoria": "2",
     "Categoria": "Platos",
-    "Imagen": "https://imgmedia.buenazo.pe/640x345/buenazo/original/2021/07/17/60ebacddccd27953a47344f4.jpg"
+    "Imagen": "/assets/img/productos/combopersonal.png",
+    "Descripcion":"Chaufa de Pollo"
   }
 ]

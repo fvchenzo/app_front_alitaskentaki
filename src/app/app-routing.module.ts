@@ -8,17 +8,19 @@ import { DetallePedidoComponent } from "./pages/pedido/detalle-pedido/detalle-pe
 import { ListadoProductoComponent } from "./pages/producto/listado-producto/listado-producto.component";
 import { DetalleProductoComponent } from "./pages/producto/detalle-producto/detalle-producto.component";
 import { AdminProductoComponent } from "./pages/producto/admin-producto/admin-producto.component";
+import { ListadoCategoriaComponent } from "./pages/categoria/listado-categoria/listado-categoria.component";
 
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'local', component: LocalComponent},
     {path: 'contacto', component: ContactoComponent},
-    {path: 'listaProducto', component: ListadoProductoComponent},
-    {path: 'detalleProducto', component: DetalleProductoComponent},
+    {path: 'listaProducto/:idCategoria', component: ListadoProductoComponent},
+    {path: 'detalleProducto/:codigo', component: DetalleProductoComponent},
     {path: 'adminProducto', component: AdminProductoComponent},
     {path: 'listaPedido', component: AdminPedidoComponent},
-    {path: 'detallePedido', component: DetallePedidoComponent}
+    {path: 'detallePedido', component: DetallePedidoComponent},
+    {path: 'listadoCategoria', component: ListadoCategoriaComponent}
 ];
 
 @NgModule({
