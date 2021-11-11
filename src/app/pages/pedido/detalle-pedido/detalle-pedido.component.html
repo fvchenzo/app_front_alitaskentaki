@@ -1,0 +1,86 @@
+<div class="container" >
+    <h4>Detalle del Pedido #</h4>
+    <form [formGroup]="detallePedidoForm" class="">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text" class="form-control" formControlName="id" readonly/>
+                </div>
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <input type="email" class="form-control" formControlName="cliente"/>
+                </div>
+                <div class="form-group">
+                    <label>Distrito</label>
+                    <input type="text" class="form-control" formControlName="distrito"/>
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control" formControlName="direccion"/>
+                </div>
+                
+            </div>
+            <div formGroupName="items" class="col-sm-8 mt-4">
+                <table class="table text-center" >
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><input type="text" class="form-control" formControlName="producto" ></td>
+                            <td><input type="number" value="10" class="form-control" formControlName="cantidad"></td>
+                            <td><a href="#">Modificar</a> <a href="#" style="color: red;">Eliminar</a> <a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><input type="text" class="form-control" formControlName="producto"></td>
+                            <td><input type="number" value="5" class="form-control"formControlName="cantidad"></td>
+                            <td><a href="#">Modificar</a> <a href="#" style="color: red;">Eliminar</a> <a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><input type="text" class="form-control" formControlName="producto"></td>
+                            <td><input type="number" value="15" class="form-control" formControlName="cantidad"></td>
+                            <td><a href="#">Modificar</a> <a href="#" style="color: red;">Eliminar</a> <a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Total a cobrar  (S/.)</td>
+                            <td colspan="1"><input type="text" value="150" class="form-control" formControlName="total" readonly></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             <div>
+                    Datos del formulario: {{ detallePedidoForm.value | json }}
+                    Formulario Valido? {{ detallePedidoForm.valid }}
+                </div>
+                
+        </div>
+        <div class="row justify-content-center">
+            <div class="form-group">
+                <div class="row">
+                    <button class="btn btn-success mr-2">
+                        Agregar Producto
+                    </button>
+                    <button  class="btn btn-info mr-2" >
+                        Actualizar Pedido
+                    </button>
+                    <button  class="btn btn-primary" >
+                        Volver
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+</div>
+
+
