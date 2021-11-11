@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
-  selector: 'app-producto',
-  templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
+  selector: 'app-admin-producto',
+  templateUrl: './admin-producto.component.html',
+  styleUrls: ['./admin-producto.component.css']
 })
-export class ProductoComponent implements OnInit {
+export class AdminProductoComponent implements OnInit {
 
   productos : any = [];
 
@@ -22,7 +22,4 @@ export class ProductoComponent implements OnInit {
   ngOnInit(): void {
     this.__getProductos();
   }
-
-
-
 }
