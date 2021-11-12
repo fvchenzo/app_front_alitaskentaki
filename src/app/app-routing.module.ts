@@ -10,6 +10,8 @@ import { DetalleProductoComponent } from "./pages/producto/detalle-producto/deta
 import { AdminProductoComponent } from "./pages/producto/admin-producto/admin-producto.component";
 import { ListadoCategoriaComponent } from "./pages/categoria/listado-categoria/listado-categoria.component";
 import { PedidoclienteComponent } from "./pages/pedidocliente/pedidocliente.component";
+import { CarritoComponent } from "./pages/cliente/carrito/carrito.component";
+import { PagoComponent } from "./pages/cliente/pago/pago.component";
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
     {path: 'listaPedido', component: AdminPedidoComponent},
     {path: 'detallePedido', component: DetallePedidoComponent},
     {path: 'listadoCategoria', component: ListadoCategoriaComponent},
-    {path: 'pedidocliente', component: PedidoclienteComponent}
+    {path: 'pedidocliente', component: PedidoclienteComponent},
+    {path: 'clienteCarrito', component: CarritoComponent},
+    {path: 'clientePago', component: PagoComponent},
 ];
 
 @NgModule({
