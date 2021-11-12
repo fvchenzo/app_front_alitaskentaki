@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DetalleProductoComponent } from './pages/producto/detalle-producto/detalle-producto.component';
 import { ListadoProductoComponent } from './pages/producto/listado-producto/listado-producto.component';
 import { AdminProductoComponent } from './pages/producto/admin-producto/admin-producto.component';
+import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/listado-categoria.component';
 
 import {GoogleMapsModule} from '@angular/google-maps';
 import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.component';
@@ -30,6 +31,7 @@ import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.comp
     DetalleProductoComponent,
     ListadoProductoComponent,
     AdminProductoComponent,
+    ListadoCategoriaComponent,
     PedidoclienteComponent
   ],
   imports: [

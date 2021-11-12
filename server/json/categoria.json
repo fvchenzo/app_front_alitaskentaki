@@ -1,0 +1,18 @@
+[
+    {
+      "IdCategoria": 1,
+      "Nombre": "Pollos",
+      "Imagen": "/assets/img/productos/combopersonal.png"
+    },
+    {
+        "IdCategoria": 2,
+        "Nombre": "Platos",
+        "Imagen": "/assets/img/productos/combopersonal.png"
+    },
+    {
+        "IdCategoria": 3,
+        "Nombre": "Bebidas",
+        "Imagen": "/assets/img/categorias/bebidas.png"
+    }
+    
+]
