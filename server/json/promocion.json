@@ -1,0 +1,18 @@
+[
+  {
+    "Codigo": 1,
+    "Imagen": "assets/img/promos/promo1.jpg"
+  },
+  {
+    "Codigo": 2,
+    "Imagen": "assets/img/promos/promo2.jpg"
+  },
+  {
+    "Codigo": 3,
+    "Imagen": "assets/img/promos/promo3.jpg"
+  },
+  {
+    "Codigo": 4,
+    "Imagen": "assets/img/promos/promo1.jpg"
+  }
+]

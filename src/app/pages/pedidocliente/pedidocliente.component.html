@@ -1,38 +1,29 @@
-<div class="container">
-    <div class="row text-center border-bottom">
-        <div class="col-1">N°</div>
-        <div class="col-6">Pedido</div>
-        <div class="col-3">Importe</div>
-        <div class="col-2">Estado</div>
-    </div>
-    <div class="row border-bottom" >
-        <div class="col-1 text-center">1</div>
-        <div class="col-2"><img src="assets/img/promos/promo1.jpg" width="180px" height="100px" /></div>
-        <div class="col-4">
-            <span><strong>Oferta 1</strong> </span>
-            <p>1/2 Pollo con ensalada, papas fritas y gaseos</p>
+<section id="mispedidos" class="bg-light" style="padding: 75px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading">Mis Pedidos</h2>
+            </div>
         </div>
-        <div class="col-3 text-center">S/ 23.23</div>
-        <div class="col-2 text-center">Entregado</div>
-    </div>
-    <div class="row border-bottom" >
-        <div class="col-1 text-center">2</div>
-        <div class="col-2"><img src="assets/img/promos/promo1.jpg" width="180px" height="100px" /></div>
-        <div class="col-4">
-            <span><strong>Oferta 1</strong> </span>
-            <p>1/2 Pollo con ensalada, papas fritas y gaseos</p>
+        <div class="row text-center border-bottom">
+            <div class="col-1">N°</div>
+            <div class="col-6">Pedido</div>
+            <div class="col-3">Importe</div>
+            <div class="col-2">Estado</div>
         </div>
-        <div class="col-3 text-center">S/ 23.23</div>
-        <div class="col-2 text-center">Entregado</div>
-    </div>
-    <div class="row border-bottom" >
-        <div class="col-1 text-center">3</div>
-        <div class="col-2"><img src="assets/img/promos/promo1.jpg" width="180px" height="100px" /></div>
-        <div class="col-4">
-            <span><strong>Oferta 1</strong> </span>
-            <p>1/2 Pollo con ensalada, papas fritas y gaseos</p>
+        <div  *ngIf="pedidoscliente[0] != null">
+            <div class="row border-bottom" *ngFor="let c of pedidoscliente">
+                <div class="col-1 text-center">{{c.Codigo}}</div>
+                <div class="col-2"><img src="{{c.Imagen}}" width="180px" height="100px" /></div>
+                <div class="col-4">
+                    <span><strong>{{c.Nombre}}</strong> </span>
+                    <p>{{c.descripcion}}</p>
+                </div>
+                <div class="col-3 text-center">{{c.moneda}} {{c.precio}}</div>
+                <div class="col-2 text-center">{{c.estado}}</div>
+            </div>
         </div>
-        <div class="col-3 text-center">S/ 23.23</div>
-        <div class="col-2 text-center">Entregado</div>
+        
+        
     </div>
-</div>
+</section>

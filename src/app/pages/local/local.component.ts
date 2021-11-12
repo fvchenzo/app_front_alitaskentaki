@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalService } from 'src/app/services/local.service';
 
 @Component({
   selector: 'app-local',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./local.component.css']
 })
 export class LocalComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  locales : any = [];
+  constructor(private readonly cs: LocalService) { }
+  __getLocales(){
+    this.cs.__getLocales().subscribe((rest: any) =>{
+        this.locales = rest;
+        console.log(rest);
+    })
   }
-
+  ngOnInit(): void {
+    this.__getLocales();
+  }
 }
