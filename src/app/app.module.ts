@@ -16,10 +16,12 @@ import { ListadoProductoComponent } from './pages/producto/listado-producto/list
 import { AdminProductoComponent } from './pages/producto/admin-producto/admin-producto.component';
 import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/listado-categoria.component';
 
-import {GoogleMapsModule} from '@angular/google-maps';
+import { GoogleMapsModule } from '@angular/google-maps';
 import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.component';
 import { CarritoComponent } from './pages/cliente/carrito/carrito.component';
 import { PagoComponent } from './pages/cliente/pago/pago.component';
+import { RegistroComponent } from './pages/login/registro/registro.component';
+import { RecuperarClaveComponent } from './pages/login/recuperar-clave/recuperar-clave.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PagoComponent } from './pages/cliente/pago/pago.component';
     ListadoCategoriaComponent,
     PedidoclienteComponent,
     CarritoComponent,
-    PagoComponent
+    PagoComponent,
+    RegistroComponent,
+    RecuperarClaveComponent
   ],
   imports: [
     BrowserModule,
