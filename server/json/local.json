@@ -1,0 +1,29 @@
+[
+  {
+    "Codigo": 1,
+    "distrito": "Jesus Maria",
+    "direccion": "Av. Mariátegui 912 LIMA-LIMA-JESÚS MARIA",
+    "telefono": "999-999-999",
+    "correo": "jmadmin@alitaskentaki.com",
+	"horario": "12:00pm - 11:00pm",
+    "Imagen": "assets/img/locales/jesus_maria.jpg"
+  },
+  {
+    "Codigo": 2,
+    "distrito": "Los Olivos",
+    "direccion": "Av. Carlos Izaguirre 1500 LIMA-LIMA-LOS OLIVOS",
+    "telefono": "999-999-999",
+    "correo": "loadmin@alitaskentaki.com",
+	"horario": "12:00pm - 11:00pm",
+    "Imagen": "assets/img/locales/jesus_maria.jpg"
+  },
+  {
+    "Codigo": 3,
+    "distrito": "Lince",
+    "direccion": "Av. Arequipa 2330 LIMA-LIMA-LINCE",
+    "telefono": "999-999-999",
+    "correo": "lcadmin@alitaskentaki.com",
+	"horario": "12:00pm - 11:00pm",
+    "Imagen": "assets/img/locales/jesus_maria.jpg"
+  }
+]

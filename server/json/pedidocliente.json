@@ -1,0 +1,38 @@
+[
+  {
+    "Codigo": 1,
+    "Nombre": "Oferta 1",
+    "descripcion": "1/2 Pollo con ensalada, papas fritas y gaseosa",
+    "precio": 23.90,
+	"moneda": "S/",
+    "estado": "Entregado",
+    "Imagen": "assets/img/promos/promo1.jpg"
+  },
+  {
+    "Codigo": 2,
+    "Nombre": "Oferta 3",
+    "descripcion": "1 Pollo con ensalada, papas fritas y gaseosa",
+    "precio": 53.90,
+	"moneda": "S/",
+    "estado": "Entregado",
+    "Imagen": "assets/img/promos/promo1.jpg"
+  },
+  {
+    "Codigo": 3,
+    "Nombre": "Platos a la Carta",
+    "descripcion": "Arroz Chaufa con 1/4 de Pollo, papas fritas, ensalada y gaseosa",
+    "precio": 30.90,
+	"moneda": "S/",
+    "estado": "Entregado",
+    "Imagen": "assets/img/promos/promo1.jpg"
+  },
+  {
+    "Codigo": 4,
+    "Nombre": "Oferta 2",
+    "descripcion": "1/4 Pollo con ensalada, papas fritas y gaseosa",
+    "precio": 17.90,
+	"moneda": "S/",
+    "estado": "Entregado",
+    "Imagen": "assets/img/promos/promo1.jpg"
+  }
+]
