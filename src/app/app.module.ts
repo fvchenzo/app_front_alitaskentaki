@@ -18,6 +18,8 @@ import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/l
 
 import {GoogleMapsModule} from '@angular/google-maps';
 import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.component';
+import { CarritoComponent } from './pages/cliente/carrito/carrito.component';
+import { PagoComponent } from './pages/cliente/pago/pago.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.comp
     ListadoProductoComponent,
     AdminProductoComponent,
     ListadoCategoriaComponent,
-    PedidoclienteComponent
+    PedidoclienteComponent,
+    CarritoComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
