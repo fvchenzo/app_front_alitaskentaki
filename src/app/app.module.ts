@@ -15,6 +15,9 @@ import { DetalleProductoComponent } from './pages/producto/detalle-producto/deta
 import { ListadoProductoComponent } from './pages/producto/listado-producto/listado-producto.component';
 import { AdminProductoComponent } from './pages/producto/admin-producto/admin-producto.component';
 
+import {GoogleMapsModule} from '@angular/google-maps';
+import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +29,15 @@ import { AdminProductoComponent } from './pages/producto/admin-producto/admin-pr
     DetallePedidoComponent,
     DetalleProductoComponent,
     ListadoProductoComponent,
-    AdminProductoComponent
+    AdminProductoComponent,
+    PedidoclienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingngMOdule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

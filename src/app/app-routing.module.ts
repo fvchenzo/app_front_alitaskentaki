@@ -8,6 +8,7 @@ import { DetallePedidoComponent } from "./pages/pedido/detalle-pedido/detalle-pe
 import { ListadoProductoComponent } from "./pages/producto/listado-producto/listado-producto.component";
 import { DetalleProductoComponent } from "./pages/producto/detalle-producto/detalle-producto.component";
 import { AdminProductoComponent } from "./pages/producto/admin-producto/admin-producto.component";
+import { PedidoclienteComponent } from "./pages/pedidocliente/pedidocliente.component";
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path: 'detalleProducto', component: DetalleProductoComponent},
     {path: 'adminProducto', component: AdminProductoComponent},
     {path: 'listaPedido', component: AdminPedidoComponent},
-    {path: 'detallePedido', component: DetallePedidoComponent}
+    {path: 'detallePedido', component: DetallePedidoComponent},
+    {path: 'pedidocliente', component: PedidoclienteComponent}
 ];
 
 @NgModule({
