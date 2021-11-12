@@ -16,6 +16,9 @@ import { ListadoProductoComponent } from './pages/producto/listado-producto/list
 import { AdminProductoComponent } from './pages/producto/admin-producto/admin-producto.component';
 import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/listado-categoria.component';
 
+import {GoogleMapsModule} from '@angular/google-maps';
+import { PedidoclienteComponent } from './pages/pedidocliente/pedidocliente.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +31,15 @@ import { ListadoCategoriaComponent } from './pages/categoria/listado-categoria/l
     DetalleProductoComponent,
     ListadoProductoComponent,
     AdminProductoComponent,
-    ListadoCategoriaComponent
+    ListadoCategoriaComponent,
+    PedidoclienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingngMOdule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { ListadoProductoComponent } from "./pages/producto/listado-producto/list
 import { DetalleProductoComponent } from "./pages/producto/detalle-producto/detalle-producto.component";
 import { AdminProductoComponent } from "./pages/producto/admin-producto/admin-producto.component";
 import { ListadoCategoriaComponent } from "./pages/categoria/listado-categoria/listado-categoria.component";
+import { PedidoclienteComponent } from "./pages/pedidocliente/pedidocliente.component";
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: 'listaPedido', component: AdminPedidoComponent},
     {path: 'detallePedido', component: DetallePedidoComponent},
     {path: 'listadoCategoria', component: ListadoCategoriaComponent}
+    {path: 'pedidocliente', component: PedidoclienteComponent}
 ];
 
 @NgModule({

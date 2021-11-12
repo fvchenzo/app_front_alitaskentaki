@@ -19,11 +19,6 @@
           </a>
         </li>
         <li class="nav-item px-lg-2"> 
-          <a class="nav-link" routerLink="listaPedido">
-            <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Pedidos
-          </a>
-        </li>
-        <li class="nav-item px-lg-2"> 
           <a class="nav-link" routerLink="local">
             <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Locales
           </a>
@@ -33,13 +28,25 @@
             <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Contacto
           </a>
         </li>
-      </ul>
-      <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
         <li class="nav-item px-lg-2"> 
-          <a class="nav-link" routerLink="login">
-            <span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></span>Login
+          <a class="nav-link" routerLink="listaPedido">
+            <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Gestion Pedidos
           </a>
         </li>
+        <li class="nav-item px-lg-2"> 
+          <a class="nav-link" routerLink="adminProducto">
+            <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Gestion Productos
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-circle-o fa-lg"></i><span>login</span></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="pedidocliente">Ver Pedidos</a></li>
+          </ul>
+        </li>
+        
       </ul>
     </div>
   </div>
