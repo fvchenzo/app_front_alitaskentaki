@@ -2,7 +2,7 @@
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div  *ngIf="promociones[0] != null">
-            <div class="carousel-item" *ngFor="let c of promociones"  [ngClass]= "{'active' : c.id==1}">
+            <div class="carousel-item" *ngFor="let c of promociones"  [ngClass]= "{'active' : c.Codigo==1}">
               <img src="{{c.Imagen}}" class="d-block w-100" width="400px" height="580px">
             </div>
           </div>

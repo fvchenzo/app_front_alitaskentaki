@@ -18,10 +18,12 @@
                 <tr *ngFor="let c of pedidoscliente">
                     <td scope="row">{{ c.Codigo }}</td>
                     <td>
-                        <div class="col-2"><img src="{{c.Imagen}}" width="180px" height="100px" /></div>
-                        <div class="col">
-                            <span><strong>{{c.Nombre}}</strong> </span>
-                            <p>{{c.descripcion}}</p>
+                        <div class="row">
+                            <div class="col-4"><img src="{{c.Imagen}}" width="180px" height="100px" /></div>
+                            <div class="col-8">
+                                <span><strong>{{c.Nombre}}</strong> </span>
+                                <p>{{c.descripcion}}</p>
+                            </div>
                         </div>
                     </td>
                     <td>{{c.moneda}} {{c.precio}}</td>
