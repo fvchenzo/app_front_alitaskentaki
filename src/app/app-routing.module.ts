@@ -31,7 +31,8 @@ const routes: Routes = [
     { path: 'clienteCarrito', component: CarritoComponent },
     { path: 'clientePago', component: PagoComponent },
     { path: 'registro', component: RegistroComponent },
-    { path: 'recuperarclave', component: RecuperarClaveComponent }
+    { path: 'recuperarclave', component: RecuperarClaveComponent },
+    { path: '', component: HomeComponent },
 ];
 
 @NgModule({
