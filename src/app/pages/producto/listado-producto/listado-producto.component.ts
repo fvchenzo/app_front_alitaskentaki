@@ -15,8 +15,10 @@ export class ListadoProductoComponent implements OnInit {
     private readonly ar: ActivatedRoute) { }
 
   __getProductos(idCategoria: number){
-    this.ps.__getProductos().subscribe((rest: any) =>{
-        this.productos = rest.filter((item: { IdCategoria: Number}) => item.IdCategoria == idCategoria);
+    console.log(idCategoria);
+    this.ps.__getProductosPorCategoria(idCategoria).subscribe((rest: any) =>{
+        this.productos = rest.data;
+        //console.log(rest.data);
     })
   }
 

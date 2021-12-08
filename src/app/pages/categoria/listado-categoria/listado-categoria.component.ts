@@ -12,8 +12,8 @@ export class ListadoCategoriaComponent implements OnInit {
   constructor(private readonly cs: CategoriaService) { }
   __getCategorias(){
     this.cs.__getCategorias().subscribe((rest: any) =>{
-        this.categorias = rest;
-        console.log(rest);
+        this.categorias = rest.data;
+        //console.log(rest.data);
     })
   }
   ngOnInit(): void {
