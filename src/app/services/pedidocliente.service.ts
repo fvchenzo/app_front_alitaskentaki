@@ -17,4 +17,10 @@ export class PedidoclienteService {
    .set('idUsuario', idUsuario.toString());
     return this.http.get('https://localhost:44327/api/carrito/obtenercarritoporusuario', {params});
   }
+
+  __getMontoCarritoCliente(idUsuario: number){
+    const params = new HttpParams()
+   .set('idUsuario', idUsuario.toString());
+    return this.http.get('https://localhost:44327/api/carrito/obtenermontocarritoporusuario', {params});
+  }
 }
