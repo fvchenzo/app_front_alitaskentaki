@@ -4,12 +4,12 @@
             <div class="col-lg-4">
                 
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" *ngIf="carrito != null">
                 <form>
                     <div>
                         <div class="form-group">
                             <label>Importe a pagar:</label>
-                            <input type="text" class="form-control" value="20.00" disabled >
+                            <input type="text" class="form-control" value="S/ {{carrito.monto}}" disabled >
                         </div>
                         <div class="form-group">
                             <label>Número de Tarjeta:</label>
