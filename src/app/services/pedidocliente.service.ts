@@ -12,15 +12,11 @@ export class PedidoclienteService {
     return this.http.get('/api/pedidocliente/getpedidoscliente');
   }
 
-  __getCarritoCliente(idUsuario: number){
-    const params = new HttpParams()
-   .set('idUsuario', idUsuario.toString());
-    return this.http.get('https://localhost:44327/api/carrito/obtenercarritoporusuario', {params});
+  __getCarritoCliente(headers: any){
+    return this.http.get('https://localhost:44327/api/carrito/obtenercarritoporusuario', { headers });
   }
 
-  __getMontoCarritoCliente(idUsuario: number){
-    const params = new HttpParams()
-   .set('idUsuario', idUsuario.toString());
-    return this.http.get('https://localhost:44327/api/carrito/obtenermontocarritoporusuario', {params});
+  __getMontoCarritoCliente(headers: any){
+    return this.http.get('https://localhost:44327/api/carrito/obtenermontocarritoporusuario', { headers });
   }
 }
