@@ -19,4 +19,8 @@ export class PedidoclienteService {
   __getMontoCarritoCliente(headers: any){
     return this.http.get('https://localhost:44327/api/carrito/obtenermontocarritoporusuario', { headers });
   }
+
+  __be_insertarCarito(data: any, headers: any) {
+    return this.http.post<any>('https://localhost:44327/api/carrito/agregarproducto', data, { headers });
+  }
 }
