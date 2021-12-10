@@ -25,7 +25,7 @@ const routes: Routes = [
     { path: 'detalleProducto/:codigo', component: DetalleProductoComponent },
     { path: 'adminProducto', component: AdminProductoComponent },
     { path: 'listaPedido', component: AdminPedidoComponent },
-    { path: 'detallePedido', component: DetallePedidoComponent },
+    { path: 'detallePedido/:idusuario/:idpedido', component: DetallePedidoComponent },
     { path: 'listadoCategoria', component: ListadoCategoriaComponent },
     { path: 'pedidocliente', component: PedidoclienteComponent },
     { path: 'clienteCarrito', component: CarritoComponent },

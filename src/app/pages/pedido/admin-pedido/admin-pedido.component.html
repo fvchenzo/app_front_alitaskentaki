@@ -1,9 +1,9 @@
-<div class="container" >
+<div class="container" *ngIf="pedidos != null">
     <h4>Lista de Pedidos!</h4>
-    <table class="table table-hover">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
             <tr>
-              <th scope="col">#</th>
+              <!-- <th scope="col">#</th> -->
               <th scope="col">Cliente</th>
               <th scope="col">Distrito</th>
               <th scope="col">Dirección</th>
@@ -11,28 +11,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td><a class="link-secondary" routerLink="../detallePedido" style="color: blue;">Pendiente</a></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td><a class="link-secondary" routerLink="../detallePedido" style="color: blue;">Pendiente</a></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-              <td>Cesar</td>
-              <td>Oxford</td>
-              <td>@twitter</td>
-              <td><a class="link-secondary" routerLink="../detallePedido" style="color: blue;">Pendiente</a></td>
-              
-            </tr>
+            
+              <tr *ngFor="let p of pedidos ">
+                
+                <!-- <th scope="row">{{pedidos.length}}</th> -->
+                <td>{{p.usuario.nombres}}</td>
+                <td>{{p.usuario.distrito}}</td>
+                <td>{{p.usuario.direccion}}</td>
+                <td><a class="link-secondary" routerLink="../detallePedido/{{p.idpedido}}/{{p.idusuario}}" style="color: blue;">
+                  {{p.estado}}
+                  </a>
+                </td>
+              </tr>
+            
           </tbody>
     </table>
 </div>
