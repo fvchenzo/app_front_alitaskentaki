@@ -18,4 +18,11 @@ export class ProductosService {
     
     return this.http.get('https://localhost:44327/api/producto/obtenerproductosporcategoria', {params});
   }
+
+  __getProductosPorId(idProducto: number){
+    const params = new HttpParams()
+   .set('idProducto', idProducto.toString());
+    
+    return this.http.get('https://localhost:44327/api/producto/obtenerproductoporid', {params});
+  }
 }

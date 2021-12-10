@@ -8,9 +8,6 @@
         <div *ngIf="productos[0] != null" class="row">
             <div *ngFor="let p of productos" class="col-sm-6 col-md-4 portfolio-item">
                 <a routerLink="/detalleProducto/{{p.codigo}}" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                    </div>
                     <img class="img-fluid" src="{{ p.imagen }}">
                 </a>
                 <div class="portfolio-caption">
