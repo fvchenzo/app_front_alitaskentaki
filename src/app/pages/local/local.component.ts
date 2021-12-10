@@ -11,7 +11,7 @@ export class LocalComponent implements OnInit {
   constructor(private readonly cs: LocalService) { }
   __getLocales(){
     this.cs.__getLocales().subscribe((rest: any) =>{
-        this.locales = rest;
+        this.locales = rest.data;
         console.log(rest);
     })
   }
