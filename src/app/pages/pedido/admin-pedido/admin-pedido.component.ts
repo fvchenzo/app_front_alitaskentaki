@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AdminpedidoService } from 'src/app/services/adminpedido.service';
 
 @Component({
   selector: 'app-admin-pedido',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPedidoComponent implements OnInit {
 
-  constructor() { }
+  pedidos: any = []
+
+  constructor(
+    private readonly as: AdminpedidoService,
+  ) { }
+
+  __getPedidos() {
+    this.as.__getPedidos().subscribe((rest: any) => {
+      this.pedidos = rest.data;
+      console.log(rest);
+    })
+  }
 
   ngOnInit(): void {
+    this.__getPedidos()
   }
 
 }
