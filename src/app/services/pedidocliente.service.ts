@@ -23,4 +23,8 @@ export class PedidoclienteService {
   __be_insertarCarito(data: any, headers: any) {
     return this.http.post<any>('https://localhost:44327/api/carrito/agregarproducto', data, { headers });
   }
+
+  __be_insertarPedidoCarrito(headers: any) {
+    return this.http.get<any>('https://localhost:44327/api/carrito/agregarpedidocarrito', { headers });
+  }
 }
