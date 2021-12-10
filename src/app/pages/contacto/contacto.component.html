@@ -7,27 +7,33 @@
         </div>
         <div class="row">
             <div class="col">
-                <img src="assets/img/mapa.jpg" height="400px"/>
+                <img src="assets/img/logo.jpg" height="400px"/>
             </div>
             <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/logo.jpg" height="300px"/>
+                <form [formGroup]="sugerenciaForm" method="post" >
+                    <div class="form-group">
+                    <label for="txtnombre">Nombres</label>
+                    <input type="email" class="form-control" id="txtnombre" aria-describedby="emailHelp" placeholder="Ingrese su nombre" formControlName="nombre">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <label>Direccion: Av. Canada 123</label>
-                        </div>
-                        <div class="row">
-                            <label>Telefono: 999-999-999</label>
-                        </div>
-                        <div class="row">
-                            <label>Correo: contactos@alitaskentaki.com.pe</label>
-                        </div>
+                    <div class="form-group">
+                        <label for="txtcorreo">Correo</label>
+                        <input type="email" class="form-control" id="txtcorreo" aria-describedby="emailHelp" placeholder="Ingrese su correo" formControlName="correo">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="txtTipoConsulta">Tipo de consulta</label>
+                        <select class="form-control" formControlName="tipoconsulta">
+                            <option>Sugerencia</option>
+                            <option>Queja</option>
+                            <option>Reclamo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="txtConsulta">Escriba su consulta</label>
+                    <textarea class="form-control" id="txtConsulta" rows="3" formControlName="consulta"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" (click)="__onSubmit()">Submit</button>
+                </form>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
         <div class="row" *ngIf="locales[0] != null">
             <div class="col-sm-6 col-md-4" *ngFor="let c of locales">
                 <div class="card mb-3" style=" width:20rem;" >
-                    <img src="{{c.Imagen}}" class="card-img-top" width="100px" height="200px">
+                    <img src="{{c.imagen}}" class="card-img-top" width="100px" height="200px">
                     <div class="card-body">
                     <h4 class="card-title">{{c.distrito}}</h4>
                     <div class="card-text">
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-1"><i class="fa fa fa-calendar fa-lg"></i></div>
-                                    <div class="col">{{c.horario}} </div>
+                                    <div class="col">{{c.horaapertura}} - {{c.horacierre}} </div>
                                 </div>
                             </div>
                         </div>
