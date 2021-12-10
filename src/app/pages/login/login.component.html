@@ -5,14 +5,14 @@
                 <i class=" fas fa-cubes fa-10x img-fluid" alt="Phone image"> </i>
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                <form>
+                <form [formGroup]="loginForm" method="post">
                     <div class="form-outline mb-4">
-                        <input type="email"  class="form-control form-control-lg" />
+                        <input type="email"  formControlName="usuario" class="form-control form-control-lg" />
                         <label class="form-label" >Correo electrónico</label>
                     </div>
 
                     <div class="form-outline mb-4">
-                        <input type="password"  class="form-control form-control-lg" />
+                        <input type="password" formControlName="password" class="form-control form-control-lg" />
                         <label class="form-label" >Clave</label>
                     </div>
 
@@ -23,7 +23,7 @@
                         </div>
                         <a routerLink="../recuperarclave" >Recuperar Contraseña</a>
                     </div>
-                    <button type="submit" class="btn btn-info btn-lg btn-block">Ingresar</button>
+                    <button (click)="__onSubmit()"  type="submit" class="btn btn-info btn-lg btn-block">Ingresar</button>
 
 
                     <a routerLink="../registro"  class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
