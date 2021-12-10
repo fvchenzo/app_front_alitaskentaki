@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AdminpedidoService } from 'src/app/services/adminpedido.service';
 
 @Component({
@@ -14,6 +14,8 @@ export class AdminPedidoComponent implements OnInit {
 
   constructor(
     private readonly as: AdminpedidoService,
+    private readonly ar: ActivatedRoute,
+    private router: Router
   ) { }
 
   __getPedidos() {
@@ -23,8 +25,22 @@ export class AdminPedidoComponent implements OnInit {
     })
   }
 
+  __modificarEstado(idpedido: number) {
+    this.as.__modificarEstado(idpedido).subscribe((rest: any) => {
+      console.log(rest.data);
+      this.__getPedidos();
+      
+    })
+  }
+
   ngOnInit(): void {
-    this.__getPedidos()
+    this.__getPedidos();
+    this.ar.params.subscribe((params: Params) => {
+      if(params.idpedido) {
+        this.__modificarEstado(params.idpedido);
+        //this.router.navigate(['listaPedido'])
+      }
+    });
   }
 
 }
