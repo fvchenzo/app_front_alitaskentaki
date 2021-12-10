@@ -5,7 +5,7 @@
                 <h2 class="text-uppercase section-heading">Mi Pedido</h2>
             </div>
         </div>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" *ngIf="carrito[0] != null">
             <thead class="thead-dark">
                 <tr>
                     <th>Cantidad</th>
@@ -14,25 +14,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1/4 de Pollo + Ensalada + Papas</td>
-                    <td class="text-right">S/ 20.00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Pollo saltado + Chicha</td>
-                    <td class="text-right">S/ 60.00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saltado de Pollo</td>
-                    <td class="text-right">S/ 24.00</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Total</td>
-                    <td class="text-right">S/ 104.00</td>
+                <tr *ngFor="let p of carrito">
+                    <td>{{ p.cantidad }}</td>
+                    <td>{{ p.nombre }}</td>
+                    <td class="text-right">S/ {{ p.monto }}</td>
                 </tr>
             </tbody>
         </table>
