@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 80px;">
     <div class="row col-m-12">
         <div class="col-sm-10">
             <h3>Gestión de Productos</h3>
         </div>    
         <div class="col-sm-2">
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"  data-target="#modelId">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"  data-target="#editForm" data-codigo="0">
                 Nuevo
             </button>
   
@@ -26,13 +26,17 @@
         </thead>
         <tbody *ngFor="let p of productos">
             <tr>
-                <td scope="row">{{ p.Codigo }}</td>
-                <td>{{ p.Nombre }}</td>
-                <td>{{ p.Precio }}</td>
-                <td>{{ p.Categoria }}</td>
+                <td scope="row">{{ p.codigo }}</td>
+                <td>{{ p.nombre }}</td>
+                <td>{{ p.precio }}</td>
+                <td>{{ p.categoria }}</td>
                 <td>
-                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"  data-target="#modelId"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-					<a href="#deleteEmployeeModal" class="delete" data-toggle="modal" data-toggle="modal" data-target="#deleteForm"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"  data-target="#editForm" 
+                            data-codigo="0"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+					<a ng-click="__onDelete(p.codigo)"
+                         href="#deleteEmployeeModal" class="delete" data-toggle="modal" data-target="#deleteForm" 
+                            data_codigo="0" 
+                            ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
             </tr>
         </tbody>
@@ -41,35 +45,48 @@
 
 
 <!-- Modal Edicion -->
-<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<div class="modal fade" id="editForm" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" #editForm>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form>
+            <form [formGroup]="productoForm" method="post">
                 <div class="modal-header">
-                        <h5 class="modal-title">Editar Producto</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                    </div>
+                    <h5 class="modal-title">Editar Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="form-group">
-                          <label for="">Nombre</label>
-                          <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="hidden" formControlName="codigo" id="codigo" name="codigo" class="primaryKey">
                         </div>
+
+                        <div class="form-group">
+                          <label for="">Nombre</label>
+                          <input type="text" formControlName="Nombre" class="form-control" placeholder="" autocomplete="off">
+                        </div>
+
                         <div class="form-group">
                             <label for="">Precio</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                          </div>
-                          <div class="form-group">
+                            <input type="number" formControlName="Precio" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="form-group">
                             <label for="">Categoria</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                          </div>
+                            <input type="number" formControlName="IdCategoria" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Imagen</label>
+                            <input type="number" formControlName="Imagen" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button (click)="__onSubmit()" type="button" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>
@@ -78,7 +95,8 @@
  
 
 <!-- Modal -->
-<div class="modal fade" id="deleteForm" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<div (show.bs.modal)='__onDelete(0)' class="modal fade" id="deleteForm" tabindex="-1" 
+    role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" #deleteForm>
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -93,8 +111,28 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button  (click)="__Delete()" type="button" class="btn btn-danger">Eliminar</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // aqui va el codigo personalizado
+$('#editForm').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var codigo = button.data('codigo') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    if (codigo=="0"){
+        modal.find('.modal-title').text('Nuevo Producto')
+    }
+    else {
+        modal.find('.modal-title').text('Editar producto ' + codigo)
+    }
+
+    modal.find('.modal-body primaryKey').val(codigo)
+  })
+
+</script>
