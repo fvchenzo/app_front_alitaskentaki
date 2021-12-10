@@ -15,10 +15,18 @@
               <tr *ngFor="let p of pedidos ">
                 
                 <!-- <th scope="row">{{pedidos.length}}</th> -->
-                <td>{{p.usuario.nombres}}</td>
+                <td>
+                  <a routerLink="../detallePedido/{{p.idpedido}}/{{p.idusuario}}">
+                    {{p.usuario.nombres}}
+                  </a>
+                </td>
                 <td>{{p.usuario.distrito}}</td>
                 <td>{{p.usuario.direccion}}</td>
-                <td><a class="link-secondary" routerLink="../detallePedido/{{p.idpedido}}/{{p.idusuario}}" style="color: blue;">
+                <td>
+                  <a  (click)="__modificarEstado(p.idpedido)" class="link-secondary" 
+                    style="color: blue;"
+                    
+                  >
                   {{p.estado}}
                   </a>
                 </td>
