@@ -1,33 +1,32 @@
 <section class="vh-100">
     <div class="container py-5 h-100">
         <div class="row d-flex align-items-center justify-content-center h-100">
-            <div class="col-md-8 col-lg-7 col-xl-6">
-                <i class=" fas fa-cubes fa-10x img-fluid" alt="Phone image"> </i>
+            <div _ngcontent-tpy-c51="" class="col"><img _ngcontent-tpy-c51="" src="assets/img/logo.jpg" height="400px">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                 <form [formGroup]="loginForm" method="post">
                     <div class="form-outline mb-4">
-                        <input type="email"  formControlName="usuario" class="form-control form-control-lg" />
-                        <label class="form-label" >Correo electrónico</label>
+                        <input type="email" formControlName="usuario" class="form-control form-control-lg" />
+                        <label class="form-label">Correo electrónico</label>
                     </div>
 
                     <div class="form-outline mb-4">
                         <input type="password" formControlName="password" class="form-control form-control-lg" />
-                        <label class="form-label" >Clave</label>
+                        <label class="form-label">Clave</label>
                     </div>
 
                     <div class="d-flex justify-content-around align-items-center mb-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value=""  checked />
-                            <label class="form-check-label" > Recuerdame </label>
+                            <input class="form-check-input" type="checkbox" value="" checked />
+                            <label class="form-check-label"> Recuerdame </label>
                         </div>
-                        <a routerLink="../recuperarclave" >Recuperar Contraseña</a>
+                        <a routerLink="../recuperarclave">Recuperar Contraseña</a>
                     </div>
-                    <button (click)="__onSubmit()"  type="submit" class="btn btn-info btn-lg btn-block">Ingresar</button>
+                    <button (click)="__onSubmit()" type="submit" class="btn btn-info btn-lg btn-block">Ingresar</button>
 
 
-                    <a routerLink="../registro"  class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
-                        role="button">
+                    <a routerLink="../registro" class="btn btn-primary btn-lg btn-block"
+                        style="background-color: #3b5998" href="#!" role="button">
                         <i class="me-2"></i>Registrarse
                     </a>
 

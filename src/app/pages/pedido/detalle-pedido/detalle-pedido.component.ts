@@ -48,7 +48,7 @@ export class DetallePedidoComponent implements OnInit {
   }
 
   __Regresar(){
-    this.router.navigate(['listaPedido'])
+    this.router.navigate(['listapedido'])
   }
 
   ngOnInit(): void {
